@@ -1,12 +1,15 @@
 <script setup>
 import { defineProps } from "vue";
+import { RouterLink } from "vue-router";
 
 const { quiz } = defineProps(["quiz"]);
 </script>
 
 <template>
   <div class="card">
-    <img :src="quiz.img" alt="subject" />
+    <RouterLink :to="`/quiz/${quiz.id}`">
+      <img :src="quiz.img" alt="subject" />
+    </RouterLink>
     <div class="card-text">
       <h2>{{ quiz.name }}</h2>
       <p>{{ quiz.questions.length }}</p>
