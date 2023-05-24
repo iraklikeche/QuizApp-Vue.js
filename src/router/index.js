@@ -12,6 +12,10 @@ const router = createRouter({
       component: HomePage,
     },
     {
+      path: "/home",
+      redirect: "/",
+    },
+    {
       // ":" used to be dynamic
       path: "/quiz/:id",
       name: "quiz",
