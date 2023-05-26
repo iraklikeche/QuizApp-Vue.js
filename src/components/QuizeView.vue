@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, computed } from "vue";
+import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
 import quiz from "../data/quizes.json";
 import Question from "./Question.vue";
@@ -55,5 +55,3 @@ const onOptionSelected = (isCorrect) => {
     </div>
   </div>
 </template>
-
-<style scoped></style>
